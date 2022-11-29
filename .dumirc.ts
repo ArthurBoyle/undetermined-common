@@ -3,25 +3,34 @@ import { defineConfig } from 'dumi';
 export default defineConfig({
   resolve: {
     atomDirs: [
-      { type: 'tests', dir: 'src/components' },
-      { type: 'tests', dir: 'src/utils' },
+      { type: 'commons', dir: 'src/components' },
+      { type: 'commons', dir: 'src/utils' },
     ],
   },
   themeConfig: {
     name: '我是中国DotA的希望',
     nav: [
-      { title: '我是中国dota的希望', link: '/guide' },
-      { title: '组件', link: '/tests/foo' },
+      { title: '我是中国DotA的希望', link: '/guide' },
+      { title: '组件', link: '/commons/auth' },
     ],
     sidebar: {
-      '/tests': [
+      '/commons': [
         {
           title: '组件',
-          children: [{ title: 'Foo', link: '/tests/foo' }],
+          children: [
+            { title: 'Foo', link: '/commons/foo' },
+            { title: 'Auth', link: '/commons/auth' },
+            { title: 'BaseSelect', link: '/commons/baseselect' },
+            { title: 'Button', link: '/commons/button' },
+            { title: 'DatePicker', link: '/commons/datepicker' },
+            { title: 'ShowText', link: '/commons/showtext' },
+            { title: 'Table', link: '/commons/table' },
+            { title: 'TimePicker', link: '/commons/timepicker' },
+          ],
         },
         {
           title: '工具',
-          children: [{ title: 'util', link: '/tests/utils' }],
+          children: [{ title: 'Utils', link: '/commons/utils' }],
         },
       ],
     },

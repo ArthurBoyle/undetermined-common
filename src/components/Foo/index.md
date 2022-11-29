@@ -2,8 +2,8 @@
 
 This is an example component.
 
-```jsx
+```tsx
 import { Foo } from 'malin-common';
 
-export default () => <Foo title="Hello dumi!" />
+export default () => <Foo title="Hello dumi!" />;
 ```
