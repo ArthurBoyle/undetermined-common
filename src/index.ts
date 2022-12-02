@@ -1,5 +1,7 @@
+import 'antd/dist/antd.variable.min.css';
+
 export { default as Foo } from './components/Foo';
-export { default as Auth } from './components/Auth/Auth';
+export { default as Auth } from './components/Auth';
 export { default as BaseSelect } from './components/BaseSelect/BaseSelect';
 export { default as Button } from './components/Button/Button';
 export { DatePicker } from './components/DatePicker';

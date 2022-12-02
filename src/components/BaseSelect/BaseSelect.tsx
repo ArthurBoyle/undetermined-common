@@ -6,6 +6,10 @@ const { Option } = Select;
 
 export interface BaseSelectProps {
   value?: any;
+  disabled?: boolean;
+  placeholder?: string;
+  showSearch?: boolean;
+  mode?: 'multiple' | 'tags';
   onChange?: (
     val: any,
     options: {
@@ -14,10 +18,6 @@ export interface BaseSelectProps {
     },
     record?: any,
   ) => void;
-  disabled?: boolean;
-  placeholder?: string;
-  showSearch?: boolean;
-  mode?: 'multiple' | 'tags';
 }
 
 interface IProps extends BaseSelectProps {
@@ -51,10 +51,10 @@ const BaseSelect: React.FC<IProps> = (props) => {
     const getOptionData = (data: any): void => {
       if (utils.isObject(data)) {
         if (dataKey) {
-          const hasDataKey = Object.keys(data).find((item) => {
+          const targetDataKey = Object.keys(data).find((item) => {
             return item === dataKey;
           });
-          if (hasDataKey) {
+          if (targetDataKey) {
             setOptionList(data[dataKey]);
             return;
           }
