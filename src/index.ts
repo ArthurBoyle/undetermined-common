@@ -10,5 +10,6 @@ export { default as ShowText } from './components/ShowText';
 export { default as Table } from './components/Table';
 export { TimePicker } from './components/TimePicker';
 export { TimeRangePicker } from './components/TimePicker';
+export { default as useModal } from './hooks/useModal';
 export { default as utils } from './utils/utils';
 export { default as Context } from './context/context';

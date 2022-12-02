@@ -5,6 +5,7 @@ export default defineConfig({
     atomDirs: [
       { type: 'commons', dir: 'src/components' },
       { type: 'commons', dir: 'src/utils' },
+      { type: 'commons', dir: 'src/hooks' },
     ],
   },
   themeConfig: {
@@ -27,6 +28,10 @@ export default defineConfig({
             { title: 'Table', link: '/commons/table' },
             { title: 'TimePicker', link: '/commons/timepicker' },
           ],
+        },
+        {
+          title: 'hooks',
+          children: [{ title: 'useModal', link: '/commons/usemodal' }],
         },
         {
           title: '工具',
